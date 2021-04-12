@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Movie Application</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="register_movie">Register Movie</string>
+    <string name="display_movie">Display Movie</string>
+    <string name="favorites">Favorites</string>
+    <string name="edit_movies">Edit Movies</string>
+    <string name="search_and_ratings">Search and Ratings</string>
+    <string name="cover">COVER</string>
+    <string name="movie_application">My Movies</string>
+    <string name="instructions">INSTRUCTIONS</string>
+    <string name="register_product">Register Movie</string>
+    <string name="name">Name</string>
+    <string name="enter_movie_name">Enter Movie Name</string>
+    <string name="enter_movie_released_year">Enter Movie Released Year</string>
+    <string name="year">Year</string>
+    <string name="director">Director</string>
+    <string name="enter_movie_director">Enter Movie Director</string>
+    <string name="actresses">Actresses</string>
+    <string name="enter_actress_names">Enter Actress Names</string>
+    <string name="ratings">Ratings</string>
+    <string name="enter_movie_rating">Enter Movie Rating</string>
+    <string name="description">Description</string>
+    <string name="enter_movie_description">Enter Movie Description</string>
+    <string name="register">Register</string>
+    <string name="movies">Movies</string>
+    <string name="add_to_favourites">Add To Favourites</string>
+    <string name="save">Save</string>
+    <string name="favourite_movies">Favourite Movies</string>
+    <string name="update">update</string>
+    <string name="edit_movie">Edit Movie</string>
+    <string name="search">Search</string>
+    <string name="enter_movie_title_director_or_actress">Enter Movie Title, Director or Actress</string>
+    <string name="ratingsBtn">Ratings</string>
+    <string name="update_movie">Update Movie</string>
+</resources>
