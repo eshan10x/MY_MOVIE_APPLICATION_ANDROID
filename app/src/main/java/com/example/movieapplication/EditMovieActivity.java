@@ -10,15 +10,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -36,7 +32,9 @@ public class EditMovieActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_movie);
 
-        movieList = findViewById(R.id.updateMovieList);
+        setTitle("My Movies");
+
+        movieList = findViewById(R.id.ratingMovieList);
         dbHelper = new DBHelper(this);
 
         populateView();

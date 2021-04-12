@@ -34,4 +34,5 @@
     <string name="enter_movie_title_director_or_actress">Enter Movie Title, Director or Actress</string>
     <string name="ratingsBtn">Ratings</string>
     <string name="update_movie">Update Movie</string>
+    <string name="imdb_ratings">IMDB ratings</string>
 </resources>

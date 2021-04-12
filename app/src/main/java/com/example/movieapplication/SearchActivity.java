@@ -36,6 +36,8 @@ public class SearchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
+        setTitle("My Movies");
+
         searchName = findViewById(R.id.lookUpTxt);
         searchBtn = findViewById(R.id.lookUpBtn);
         searchMovieList = findViewById(R.id.SearchMovieList);

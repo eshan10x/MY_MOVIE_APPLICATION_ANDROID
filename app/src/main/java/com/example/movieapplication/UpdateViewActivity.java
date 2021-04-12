@@ -25,6 +25,8 @@ public class UpdateViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_view);
 
+        setTitle("My Movies");
+
         title = findViewById(R.id.updateNameTxtInput);
         year = findViewById(R.id.updateYearTxtInput);
         director = findViewById(R.id.updateDirectorTxtInput);

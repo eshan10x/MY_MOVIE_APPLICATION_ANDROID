@@ -36,6 +36,8 @@ public class FavoritesActivty extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favorites_activty);
 
+        setTitle("My Movies");
+
         movieList=(ListView)findViewById(R.id.favMovieList);
         checkBox=(CheckBox)findViewById(R.id.favCheckBox);
         saveBtn = findViewById(R.id.saveBtn);

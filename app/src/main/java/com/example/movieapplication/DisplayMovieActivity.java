@@ -18,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -35,6 +36,8 @@ public class DisplayMovieActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_movie);
+
+        setTitle("My Movies");
 
         movieList=(ListView)findViewById(R.id.movieList);
         checkBox=(CheckBox)findViewById(R.id.checkboxMovie);

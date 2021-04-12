@@ -28,7 +28,7 @@
                 android:textStyle="bold" />
 
             <ListView
-                android:id="@+id/updateMovieList"
+                android:id="@+id/ratingMovieList"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
