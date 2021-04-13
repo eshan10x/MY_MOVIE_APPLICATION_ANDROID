@@ -1,10 +1,8 @@
 package com.example.movieapplication;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,7 +16,6 @@ public class UpdateViewActivity extends AppCompatActivity {
     DBHelper dbHelper;
     RatingBar rateBar;
     MovieData movieData;
-    private static final String TAG = "MyActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,17 +76,25 @@ public class UpdateViewActivity extends AppCompatActivity {
                     Toast.makeText(UpdateViewActivity.this, "Description Cannot be Empty", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                movieData = new MovieData();
-                movieData.setMovieKey(Integer.parseInt(mKey));
-                movieData.setMovieTitle(title.getText().toString());
-                movieData.setYear(Integer.parseInt(year.getText().toString()));
-                movieData.setDirector(director.getText().toString());
-                movieData.setActresses(actresses.getText().toString());
-                movieData.setDescription(description.getText().toString());
-                movieData.setRatings((int) rateBar.getRating());
-                movieData.setIsFavourite(Integer.parseInt(mIsFav));
-                dbHelper.updateProduct(movieData);
-                Toast.makeText(UpdateViewActivity.this, "Successfully Updated", Toast.LENGTH_SHORT).show();
+
+                int yearm = Integer.parseInt(year.getText().toString());
+
+                if (yearm <= 1895) {
+                    Toast.makeText(UpdateViewActivity.this, "Can't add before 1895 movies"  , Toast.LENGTH_SHORT).show();
+                }else {
+                    movieData = new MovieData();
+                    movieData.setMovieKey(Integer.parseInt(mKey));
+                    movieData.setMovieTitle(title.getText().toString());
+                    movieData.setYear(Integer.parseInt(year.getText().toString()));
+                    movieData.setDirector(director.getText().toString());
+                    movieData.setActresses(actresses.getText().toString());
+                    movieData.setDescription(description.getText().toString());
+                    movieData.setRatings((int) rateBar.getRating());
+                    movieData.setIsFavourite(Integer.parseInt(mIsFav));
+                    dbHelper.updateProduct(movieData);
+                    Toast.makeText(UpdateViewActivity.this, "Successfully Updated", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
     }

@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.movieapplication">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MovieApplication">
-        <activity android:name=".RatingsTwoActivity"></activity>
+        <activity android:name=".InstructionsActivity"></activity>
+        <activity android:name=".RatingsTwoActivity" />
         <activity android:name=".RatingsActivity" />
         <activity android:name=".UpdateViewActivity" />
         <activity android:name=".SearchActivity" />
@@ -27,5 +26,7 @@
             </intent-filter>
         </activity>
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

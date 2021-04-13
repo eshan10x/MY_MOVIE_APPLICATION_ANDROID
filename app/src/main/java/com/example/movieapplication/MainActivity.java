@@ -46,4 +46,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, RatingsActivity.class);
         startActivity(intent);
     }
+
+    public void instruction(View view) {
+        Intent intent = new Intent(MainActivity.this, InstructionsActivity.class);
+        startActivity(intent);
+    }
 }

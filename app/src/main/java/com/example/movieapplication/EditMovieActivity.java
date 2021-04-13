@@ -6,7 +6,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,7 +24,6 @@ public class EditMovieActivity extends AppCompatActivity {
     Button updateBtn;
     ArrayAdapter<MovieData> arrayAdapter;
     ArrayList<MovieData> listContent = new ArrayList<>();
-    private static final String TAG = "MyActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,10 +37,10 @@ public class EditMovieActivity extends AppCompatActivity {
 
         populateView();
         CustomAdapter Customadapter = new CustomAdapter(this, R.layout.activity_edit_movie, listContent);
-//        arrayAdapter = new ArrayAdapter<MovieData>(EditMovieActivity.this, android.R.layout.simple_list_item_1, listContent);
         movieList.setAdapter(Customadapter);
     }
 
+    //populate the list from database
     private void populateView() {
         Cursor data = dbHelper.getContent();
         while(data.moveToNext()) {
@@ -60,6 +58,7 @@ public class EditMovieActivity extends AppCompatActivity {
         }
     }
 
+    //Custom adapter for list view
     public class CustomAdapter extends BaseAdapter {
 
         private Context context;
@@ -117,6 +116,7 @@ public class EditMovieActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     Intent intent = new Intent(EditMovieActivity.this, UpdateViewActivity.class);
+                    //transfer data to Update screen with intent
                     intent.putExtra("movieData", String.valueOf(movieData));
                     intent.putExtra("key",movieData.getMovieKey());
                     intent.putExtra("title",movieData.getMovieTitle());
@@ -127,8 +127,6 @@ public class EditMovieActivity extends AppCompatActivity {
                     intent.putExtra("description",movieData.getDescription());
                     intent.putExtra("isFavourite",movieData.getIsFavourite());
                     startActivity(intent);
-                    Log.d(TAG, "--------checkList---------" + getItemId(position));
-                    Log.d(TAG, "--------moviedata---------" + movieData);
 
                 }
             });

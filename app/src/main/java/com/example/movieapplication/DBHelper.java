@@ -132,37 +132,12 @@ public class DBHelper extends SQLiteOpenHelper {
         return db.update(TABLE_NAME, values, COLUMN_MOVIE_KEY + " = ?", new String[] { String.valueOf(movieData.getMovieKey()) });
     }
 
-//    public ArrayList<MovieData> search(String keyword) {
-//        ArrayList<MovieData> movies = null;
-//        try {
-//            SQLiteDatabase sqLiteDatabase = getReadableDatabase();
-//            Cursor cursor = sqLiteDatabase.rawQuery("SELECT "  +COLUMN_MOVIE_TITLE+ " FROM " + TABLE_NAME + " WHERE " + COLUMN_MOVIE_TITLE + " like \"%" + keyword + "%\" UNION " + "SELECT "  +COLUMN_MOVIE_TITLE+ " FROM " + TABLE_NAME + " WHERE " + COLUMN_MOVIE_DIRECTOR + " like \"%" + keyword + "%\"", null);
-//            if (cursor.moveToFirst()) {
-//                movies = new ArrayList<MovieData>();
-//                do {
-//                    MovieData movie = new MovieData();
-//                    movie.setMovieKey(cursor.getInt(0));
-//                    movie.setMovieTitle(cursor.getString(1));
-//                    movie.setYear(cursor.getInt(2));
-//                    movie.setDirector(cursor.getString(3));
-//                    movie.setActresses(cursor.getString(4));
-//                    movie.setRatings(cursor.getInt(5));
-//                    movie.setDescription(cursor.getString(6));
-//                    movie.setIsFavourite(cursor.getInt(7));
-//                    movies.add(movie);
-//                } while (cursor.moveToNext());
-//            }
-//        } catch (Exception e) {
-//            movies = null;
-//        }
-//        return movies;
-//    }
-
+    //Search movie
     public List<String> getSearchProducts(String searchString) {
         List<String> productList = new ArrayList<String>();
         // Select All Query
 
-        String selectQuery = "SELECT "  +COLUMN_MOVIE_TITLE+ " FROM " + TABLE_NAME + " WHERE " + COLUMN_MOVIE_TITLE + " like \"%" + searchString + "%\" UNION " + "SELECT "  +COLUMN_MOVIE_TITLE+ " FROM " + TABLE_NAME + " WHERE " + COLUMN_MOVIE_DIRECTOR + " like \"%" + searchString + "%\"";
+        String selectQuery = "SELECT "  +COLUMN_MOVIE_TITLE+ " FROM " + TABLE_NAME + " WHERE " + COLUMN_MOVIE_TITLE + " like \"%" + searchString + "%\" UNION " + "SELECT "  +COLUMN_MOVIE_TITLE+ " FROM " + TABLE_NAME + " WHERE " + COLUMN_MOVIE_DIRECTOR + " like \"%" + searchString + "%\" UNION " + "SELECT " +COLUMN_MOVIE_TITLE+ " FROM " + TABLE_NAME + " WHERE " + COLUMN_MOVIE_ACTRESSES + " like \"%" + searchString + "%\"";
 
 
         SQLiteDatabase db = this.getWritableDatabase();

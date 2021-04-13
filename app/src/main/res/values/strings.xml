@@ -35,4 +35,12 @@
     <string name="ratingsBtn">Ratings</string>
     <string name="update_movie">Update Movie</string>
     <string name="imdb_ratings">IMDB ratings</string>
+    <string name="display_movies">Display Movies</string>
+    <string name="reister_ins">Clicking the register button you will give Text fields with there tags. You should enter your movie data to register in database. You must enter movie year greater than 1895 and ratings should be between 10.</string>
+    <string name="display_ins">Inside display movies screen you will get all the movies you added and you can simply select a movie by checking checkbox to corresponding movie and need to click add to favourite button.</string>
+    <string name="favourite_ins">\"In this screen you will get all the favourite movies you added. Simply you can un select the checkbox and remove from favourite list. \"</string>
+    <string name="edit_ins">Inside edit movies button you will get all the movies you have added to database and you can select the movie what you need to edit. When clicked the movie it will redirect to another page with Text Fields.</string>
+    <string name="search_ins">In Search button you will get Text field and button. you can search a movie by movie title, director and cast(actrsses) in movie</string>
+    <string name="ratings_ins">In this screen you will connect to IMDB database. First you will get all the movies you have added to db. Then you can select the movie and get IMDB ratings from IMDB api</string>
+
 </resources>

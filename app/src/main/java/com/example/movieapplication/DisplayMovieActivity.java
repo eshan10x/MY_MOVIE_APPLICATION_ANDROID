@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,9 +17,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 
 public class DisplayMovieActivity extends AppCompatActivity {
 
@@ -30,7 +26,6 @@ public class DisplayMovieActivity extends AppCompatActivity {
     Button addToFavouriteBtn;
     ArrayList<MovieData> listContent = new ArrayList<>();
     ArrayList<MovieData> checkedProducts = new ArrayList<>();
-    private static final String TAG = "MyActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,16 +46,13 @@ public class DisplayMovieActivity extends AppCompatActivity {
         addToFavouriteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG, "--------checkList---------" + checkedProducts);
                 if(checkedProducts!=null) {
                     for (int i = 0; i < checkedProducts.size(); i++)
                     {
                         dbHelper.updateProduct(checkedProducts.get(i));
                         Toast.makeText(DisplayMovieActivity.this,"Successfully Added to Favourites" ,Toast.LENGTH_SHORT).show();
-                        Log.d(TAG, "--------meka---------" + checkedProducts);
                     }
                     listContent = (ArrayList<MovieData>) dbHelper.getAllData();
-                    Log.d(TAG, "--------listContent---------" + listContent);
                 }else {
                     Toast.makeText(DisplayMovieActivity.this,"Please select items you want to Add" ,Toast.LENGTH_SHORT).show();
                 }
@@ -135,7 +127,6 @@ public class DisplayMovieActivity extends AppCompatActivity {
                 holder.checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                     @Override
                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                        Log.d(TAG, "--------111111111111111111---------" + content);
                         if (isChecked) {
                             content.get(position).setIsFavourite(1);
                         }
@@ -143,7 +134,6 @@ public class DisplayMovieActivity extends AppCompatActivity {
                             content.get(position).setIsFavourite(0);
                         }
                         checkedProducts = content;
-                        Log.d(TAG, "--------checked Products down---------" + content);
                     }
                 });
 

@@ -118,7 +118,7 @@
                     android:id="@+id/info"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:onClick="searchRateScreen"
+                    android:onClick="instruction"
                     android:text="@string/instructions" />
 
             </LinearLayout>

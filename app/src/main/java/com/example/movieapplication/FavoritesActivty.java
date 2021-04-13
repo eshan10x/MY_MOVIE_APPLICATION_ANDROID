@@ -3,14 +3,11 @@ package com.example.movieapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
-import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -29,7 +26,6 @@ public class FavoritesActivty extends AppCompatActivity {
     Button saveBtn;
     ArrayList<MovieData> checkedProducts = new ArrayList<>();
     ArrayList<MovieData> listContent = new ArrayList<>();
-    private static final String TAG = "MyActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,7 +76,6 @@ public class FavoritesActivty extends AppCompatActivity {
             int movieIsFavourite = data.getInt(7);
 
             if (movieIsFavourite == 1) {
-                Log.d(TAG, "--------populate---------" + checkedProducts);
                 checkedProducts.add(new MovieData(movieKey,movieTitle,movieYear,movieDirector,movieActresses,movieRatings,movieDescription,movieIsFavourite));
             }else {
                 //fav list is empty
@@ -88,6 +83,7 @@ public class FavoritesActivty extends AppCompatActivity {
         }
     }
 
+    //Custom adapter for list view
     public class CustomAdapter extends BaseAdapter {
 
         private Context context;

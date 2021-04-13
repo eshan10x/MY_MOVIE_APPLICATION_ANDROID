@@ -26,11 +26,13 @@ import java.util.concurrent.ExecutionException;
 
 public class RatingsTwoActivity extends AppCompatActivity {
 
+    //variables foe Api call
     String key = "k_kzd4x28s";
     String searchMovie;
     String url;
     String urlForRating;
 
+    //Download data from Json file
     public class DownloadJSON extends AsyncTask<String, Void, String> {
 
         @Override
@@ -67,6 +69,7 @@ public class RatingsTwoActivity extends AppCompatActivity {
         }
     }
 
+    //Download image data from json file
     public class LoadImage extends AsyncTask<String, Void, Bitmap> {
         ImageView imageView;
         public LoadImage(ImageView imgResult) {
@@ -123,6 +126,7 @@ public class RatingsTwoActivity extends AppCompatActivity {
         loadImage.execute(imgUrl);
     }
 
+    //get movie key by movie title api url
         public void getMovieData() {
 
             searchMovie = mTitle.trim();
@@ -148,6 +152,7 @@ public class RatingsTwoActivity extends AppCompatActivity {
             }
         }
 
+        //get movie ratings by movie key api url
         public void getImdbRating() {
 
             DownloadJSON downloadJSON = new DownloadJSON();

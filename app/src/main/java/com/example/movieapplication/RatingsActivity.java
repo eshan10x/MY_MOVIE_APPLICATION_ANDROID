@@ -19,7 +19,6 @@ public class RatingsActivity extends AppCompatActivity {
     ListView listView;
     DBHelper dbHelper;
     ArrayList<MovieData> listContent = new ArrayList<>();
-    ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +32,6 @@ public class RatingsActivity extends AppCompatActivity {
 
         populateView();
         CustomAdapter Customadapter = new CustomAdapter(this, R.layout.activity_ratings, listContent);
-//        arrayAdapter = new ArrayAdapter<MovieData>(EditMovieActivity.this, android.R.layout.simple_list_item_1, listContent);
         listView.setAdapter(Customadapter);
 
     }
