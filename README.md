@@ -9,3 +9,5 @@ This project done using Java with Android studio
 
 For the IMDB ratings have used api called - https://imdb-api.com/ 
 To save movies have used Android mySql database.
+![Screenshot_20210508-114640_Movie Application](https://user-images.githubusercontent.com/61341298/117529727-c4975600-aff6-11eb-998d-b621c4d2b255.jpg)
+![Screenshot_20210508-121438_Movie Application](https://user-images.githubusercontent.com/61341298/117529799-66b73e00-aff7-11eb-96fa-f6f62cbd8212.jpg)
