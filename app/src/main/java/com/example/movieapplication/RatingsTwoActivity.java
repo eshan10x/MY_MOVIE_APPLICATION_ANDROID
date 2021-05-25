@@ -27,7 +27,7 @@ import java.util.concurrent.ExecutionException;
 public class RatingsTwoActivity extends AppCompatActivity {
 
     //variables foe Api call
-    String key = "k_kzd4x28s";
+    String key = "YourApiKey";
     String searchMovie;
     String url;
     String urlForRating;
